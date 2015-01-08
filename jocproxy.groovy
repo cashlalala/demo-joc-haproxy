@@ -44,9 +44,10 @@ def monitor(JenkinsInstance joc){
 	println("jocproxy: polling")
 	Set jenkinsInstances = []
 	jenkinsInstances.add(joc)
-
+    debug("Look for jobs in working dir")
 	// grab all connected client masters from joc
 	File jocJobs = new File("${joc.jenkinsHome}/jobs")
+
 	FileFilter configFilter = new NameFileFilter("config.xml")
 	Collection<File> configs = FileUtils.listFiles(jocJobs, configFilter, TrueFileFilter.INSTANCE)
 
