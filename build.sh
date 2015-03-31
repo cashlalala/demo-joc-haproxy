@@ -13,8 +13,6 @@ fi
 
 echo Building docker file $IMAGE_NAME
 
-
-
 docker build -t="$IMAGE_NAME" .
 
-docker push $IMAGE_NAME
+#docker push $IMAGE_NAME
