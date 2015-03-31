@@ -13,7 +13,7 @@ ADD /jocproxy.groovy /jocproxy.groovy
 ADD /haproxy.cfg /etc/haproxy/haproxy.cfg
 ADD /rsyslog-haproxy.conf /etc/rsyslog.d/haproxy.conf
 
-ENTRYPOINT ["/start-haproxy.sh"]
+ENTRYPOINT ["sh","/start-haproxy.sh"]
 
 
 
